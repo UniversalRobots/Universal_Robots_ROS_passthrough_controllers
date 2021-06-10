@@ -1,0 +1,45 @@
+# A controller to forward joint trajectories to a native robot controller for
+# interpolation.
+forward_joint_trajectories:
+    type: "pass_through_controllers/JointTrajectoryController"
+    joints:
+    - joint1
+    - joint2
+    - joint3
+    - joint4
+    - joint5
+    - joint6
+
+# A controller to forward Cartesian trajectories to a native robot controller
+# for interpolation.
+forward_cartesian_trajectories:
+    type: "pass_through_controllers/CartesianTrajectoryController"
+    joints:
+    - joint1
+    - joint2
+    - joint3
+    - joint4
+    - joint5
+    - joint6
+
+# For testing resource conflicts with joint trajectory forwarding
+conflicting_joint_controller:
+    type: "position_controllers/JointTrajectoryController"
+    joints:
+    - joint1
+    - joint2
+    - joint3
+    - joint4
+    - joint5
+    - joint6
+
+# For testing resource conflicts with Cartesian trajectory forwarding
+conflicting_cartesian_controller:
+    type: "position_controllers/JointTrajectoryController"
+    joints:
+    - joint1
+    - joint2
+    - joint3
+    - joint4
+    - joint5
+    - joint6
