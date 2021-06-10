@@ -117,7 +117,7 @@ HWInterface::HWInterface()
   // Initialize and register speed scaling.
   // Note: The handle's name is a convention.
   // ROS-controllers will use this name when calling getHandle().
-  speedsc_interface_.registerHandle(hardware_interface::SpeedScalingHandle("speed_scaling_factor", &speed_scaling_));
+  speedsc_interface_.registerHandle(scaled_controllers::SpeedScalingHandle("speed_scaling_factor", &speed_scaling_));
   registerInterface(&speedsc_interface_);
 
   // Robot dummy communication
