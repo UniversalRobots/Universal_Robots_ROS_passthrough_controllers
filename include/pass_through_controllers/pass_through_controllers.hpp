@@ -59,7 +59,7 @@ bool PassThroughController<TrajectoryInterface>::init(hardware_interface::RobotH
   trajectory_interface_->setResources(joint_names_);
 
   // Use speed scaling interface if available (optional).
-  auto speed_scaling_interface = hw->get<hardware_interface::SpeedScalingInterface>();
+  auto speed_scaling_interface = hw->get<scaled_controllers::SpeedScalingInterface>();
   if (!speed_scaling_interface)
   {
     ROS_INFO_STREAM(controller_nh.getNamespace() << ": Your RobotHW seems not to provide speed scaling. Starting "
@@ -68,7 +68,7 @@ bool PassThroughController<TrajectoryInterface>::init(hardware_interface::RobotH
   }
   else
   {
-    speed_scaling_ = std::make_unique<hardware_interface::SpeedScalingHandle>(speed_scaling_interface->getHandle("speed"
+    speed_scaling_ = std::make_unique<scaled_controllers::SpeedScalingHandle>(speed_scaling_interface->getHandle("speed"
                                                                                                                  "_scal"
                                                                                                                  "ing_"
                                                                                                                  "facto"

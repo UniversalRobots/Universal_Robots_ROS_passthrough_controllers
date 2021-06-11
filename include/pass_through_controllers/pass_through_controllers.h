@@ -105,14 +105,14 @@ struct CartesianBase
 template <class TrajectoryInterface>
 class PassThroughController
   : public controller_interface::MultiInterfaceController<TrajectoryInterface,
-                                                          hardware_interface::SpeedScalingInterface>,
+                                                          scaled_controllers::SpeedScalingInterface>,
     public std::conditional<std::is_same<TrajectoryInterface, hardware_interface::JointTrajectoryInterface>::value,
                             JointBase, CartesianBase>::type
 {
 public:
   PassThroughController()
     : controller_interface::MultiInterfaceController<TrajectoryInterface,
-                                                     hardware_interface::SpeedScalingInterface>(
+                                                     scaled_controllers::SpeedScalingInterface>(
           true)  // Make speed scaling optional
   {
   }
@@ -216,7 +216,7 @@ private:
 
   std::atomic<bool> done_;
   ActionDuration action_duration_;
-  std::unique_ptr<hardware_interface::SpeedScalingHandle> speed_scaling_;
+  std::unique_ptr<scaled_controllers::SpeedScalingHandle> speed_scaling_;
   std::vector<std::string> joint_names_;
   typename Base::Tolerance path_tolerances_;
   typename Base::Tolerance goal_tolerances_;

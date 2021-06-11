@@ -121,7 +121,7 @@ private:
   hardware_interface::PositionJointInterface jnt_pos_interface_;
   hardware_interface::JointTrajectoryInterface jnt_traj_interface_;
   hardware_interface::CartesianTrajectoryInterface cart_traj_interface_;
-  hardware_interface::SpeedScalingInterface speedsc_interface_;
+  scaled_controllers::SpeedScalingInterface speedsc_interface_;
 
   // Buffers
   std::vector<double> cmd_;
