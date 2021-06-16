@@ -11,10 +11,13 @@ find_package(catkin REQUIRED COMPONENTS
   actionlib
   cartesian_control_msgs
   cartesian_interface
+  control_msgs
+  controller_interface
   controller_manager
   dynamic_reconfigure
   geometry_msgs
   hardware_interface
+  pluginlib
   roscpp
   speed_scaling_interface
   trajectory_msgs
@@ -117,10 +120,13 @@ catkin_package(
     actionlib
     cartesian_control_msgs
     cartesian_interface
+    control_msgs
+    controller_interface
     controller_manager
     dynamic_reconfigure
     geometry_msgs
     hardware_interface
+    pluginlib
     roscpp
     speed_scaling_interface
     trajectory_msgs
