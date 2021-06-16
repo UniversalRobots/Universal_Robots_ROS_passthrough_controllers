@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   actionlib
   cartesian_control_msgs
   cartesian_interface
+  control_msgs
   controller_manager
   dynamic_reconfigure
   geometry_msgs
@@ -117,6 +118,7 @@ catkin_package(
     actionlib
     cartesian_control_msgs
     cartesian_interface
+    control_msgs
     controller_manager
     dynamic_reconfigure
     geometry_msgs
