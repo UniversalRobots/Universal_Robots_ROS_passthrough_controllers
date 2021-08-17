@@ -47,7 +47,7 @@ forward_cartesian_trajectories:
 
 ## Examples
 The [integration
-tests](https://github.com/UniversalRobots/Universal_Robots_ROS_passthrough_controllers/test) from this package might give a first impression on how to use this controller.
+tests](https://github.com/UniversalRobots/Universal_Robots_ROS_passthrough_controllers/tree/main/test) from this package might give a first impression on how to use this controller.
 
 Secondly, the [`ur_robot_driver`](https://github.com/UniversalRobots/Universal_Robots_ROS_Driver/tree/master/ur_robot_driver)
 uses those controllers.
